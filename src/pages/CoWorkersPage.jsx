@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ArrowLeft2, ArrowRight2 } from "iconsax-reactjs";
 import { FiUsers as FiUsersIcon } from "react-icons/fi";
 
-const sampleCoWorkers = [
+export const sampleCoWorkers = [
     { id: 1, name: "Parisa Babayee", role: "CEO", photo: "https://i.pravatar.cc/150?img=47" },
     { id: 2, name: "Jahan Hatami", role: "Mentor", photo: "https://i.pravatar.cc/150?img=11" },
     { id: 3, name: "Minoo Amiri", role: "Psychologist", photo: "https://i.pravatar.cc/150?img=45" },

@@ -31,7 +31,7 @@ export const TaskProgressChart = () => {
 
     return (
         <div className="flex items-center md:justify-around gap-6 h-full">
-            <div className="w-40 h-40 md:w-64 md:h-64 flex-shrink-0" dir="ltr">
+            <div className="w-auto h-auto max-h-52 max-w-52 flex-shrink-0" dir="ltr">
                 <Doughnut data={data} options={options} />
             </div>
             <div className="flex flex-col gap-4">

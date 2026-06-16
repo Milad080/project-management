@@ -46,7 +46,7 @@ export default function DashboardTasksList() {
 
     const tasks = order
         ? order.map(id => allTasks.find(t => t.id === id)).filter(Boolean)
-        : allTasks.slice(0, 5);
+        : allTasks.slice(0, 8);
 
     function handleDragEnd({ active, over }) {
         if (active.id !== over?.id) {
@@ -58,12 +58,14 @@ export default function DashboardTasksList() {
     }
 
     return (
-        <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-            <SortableContext items={tasks.map(t => t.id)} strategy={verticalListSortingStrategy}>
-                <div>
-                    {tasks.map((task, i) => <SortableTaskCard key={task.id} task={task} colorIdx={i} />)}
-                </div>
-            </SortableContext>
-        </DndContext>
+        <div className="h-full overflow-y-auto pl-2 custom-scrollbar">
+            <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+                <SortableContext items={tasks.map(t => t.id)} strategy={verticalListSortingStrategy}>
+                    <div>
+                        {tasks.map((task, i) => <SortableTaskCard key={task.id} task={task} colorIdx={i} />)}
+                    </div>
+                </SortableContext>
+            </DndContext>
+        </div>
     );
 }

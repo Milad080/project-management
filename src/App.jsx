@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import LoginPage from "./pages/LoginPage";
 import DashboardPage from "./pages/DashboardPage";
@@ -19,7 +19,7 @@ const ProtectedRoute = ({ children }) => {
 
 function App() {
     return (
-        <Router>
+        <HashRouter>
             <Routes>
                 <Route path="/login" element={<LoginPage />} />
 
@@ -33,9 +33,6 @@ function App() {
                     <Route path="/dashboard" element={<DashboardPage />} />
                     <Route path="/projects" element={<ProjectsPage />} />
                     <Route path="/projects/:id" element={<ProjectDetailPage />} />
-
-                    {/*<Route path="/projects" element={<ProjectsListPage />} />*/}
-                    {/*<Route path="/projects/:id" element={<ProjectPage />} />*/}
                     <Route path="/my-board" element={<MyBoardPage />} />
                     <Route path="/my-tasklist" element={<MyTasklistPage />} />
                     <Route path="/timesheets" element={<ProjectTimeSheetsPage />} />
@@ -45,7 +42,7 @@ function App() {
 
                 <Route path="/" element={<Navigate to="/dashboard" replace />} />
             </Routes>
-        </Router>
+        </HashRouter>
     );
 }
 
