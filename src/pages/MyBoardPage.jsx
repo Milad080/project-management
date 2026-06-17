@@ -253,11 +253,11 @@ export default function MyBoardPage() {
 
             {/* Board */}
             <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-                <div className="flex gap-4 2xl:gap-12 mx-auto flex-1 overflow-x-auto overflow-y-hidden p-4 border border-primary-400 rounded-2xl min-h-0"
+                <div className="flex gap-4 2xl:gap-10 mx-auto flex-1 overflow-x-auto overflow-y-hidden p-4 border border-primary-400 rounded-2xl min-h-0"
                      style={{ backgroundColor: "rgba(252,228,240,0.15)" }}>
                     {grouped.map(column => (
                         <div key={column.key}
-                             className={`flex-shrink-0 w-[280px] 2xl:min-w-[360px] h-full rounded-xl flex flex-col shadow-sm border ${column.borderColor} ${column.columnBg}`}>
+                             className={`flex-shrink-0 w-[280px] 2xl:min-w-[320px] h-full rounded-xl flex flex-col shadow-sm border ${column.borderColor} ${column.columnBg}`}>
                             {/* Header */}
                             <div className="px-4 py-3 flex justify-between items-center shrink-0">
                                 <AnimatePresence mode="wait" initial={false}>

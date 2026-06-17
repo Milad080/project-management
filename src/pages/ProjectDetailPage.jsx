@@ -450,11 +450,11 @@ export default function ProjectDetailPage() {
             {/* Tab: Board */}
             {activeTab === "board" && (
                 <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-                    <div className="flex gap-4 2xl:gap-12 mx-auto overflow-x-auto overflow-y-hidden p-4 border border-primary-400 rounded-2xl min-h-0 flex-1"
+                    <div className="flex gap-4 2xl:gap-10 mx-auto overflow-x-auto overflow-y-hidden p-4 border border-primary-400 rounded-2xl min-h-0 flex-1"
                          style={{ backgroundColor: "rgba(252,228,240,0.15)" }}>
                         {grouped.map(column => (
                             <div key={column.key}
-                                 className={`flex-shrink-0 w-[280px] 2xl:w-[360px] h-full rounded-xl flex flex-col shadow-sm ${column.borderColor} border ${column.columnBg}`}
+                                 className={`flex-shrink-0 w-[280px] 2xl:w-[320px] h-full rounded-xl flex flex-col shadow-sm ${column.borderColor} border ${column.columnBg}`}
                             >
 
                             {/* Column Header */}
